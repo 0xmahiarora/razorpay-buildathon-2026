@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260904-05-c4a2e96","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YAHO2-t-jNE,0","Arial":"YAGyDvJ_4Ts,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Canva Sans":"YAFLd8sKbwc,2","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAHO2VMiyZo,0","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAEul-FRQw4,0","Georgia":"YAGzXkO0pEM,0","Helvetica Neue":"YAFcf6CtJfI,0","Impact":"YAFcfnjI7Vk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YAHO2a5g66Q,0","JetBrains Mono":"YAFdJksXcAk,0","Libre Baskerville":"YACgEUFdPdA,0","Manrope":"YAHO2b2feC4,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YADLjI9qxTA,0","Nunito":"YACgEX8C5Gg,0","Oleo Script":"YACgEQQ14jI,0","Phantom Sans":"YAHO2E8Pb88,0","Playfair Display":"YACgEYmuCJE,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YADWjpfPmdk,0","Raleway":"YACgEVg3xZg,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Spectral":"YAHO2rVUHIM,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Ubuntu":"YACgERDU--Q,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0","ui-monospace":"YADlN8CFZ8Q,0","ui-sans-serif":"YACkoN-xg4g,0"}}');</script>
+  <script src="/ _sdk/9e99ecf74af2a081.telemetry_sdk.js" integrity="sha512-tZ7fmfTx2KpCLjXQnEuL9azQ4A5+7+xumsx6r/WYVD0zCP/8LP8hDeCypMQesmP+WyAew4g7l5Ah23Bjd6yoVg=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agentic Commerce Command Center</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #080807;
+      --panel: rgba(16, 17, 16, 0.72);
+      --line: rgba(255, 236, 199, 0.16);
+      --cream: #f7f0e5;
+      --muted: #b9afa0;
+      --amber: #eebd69;
+      --green: #7bd99b;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      min-height: calc(100 * min(var(--vh, 1vh), 1vh));
+      margin: 0;
+      background: var(--ink);
+    }
+    body { color: var(--cream); font-family: "DM Sans", sans-serif; }
+    .commerce-canvas { width: 100%; min-height: calc(100 * min(var(--vh, 1vh), 1vh)); position: relative; isolation: isolate; overflow: hidden; background: transparent; }
+    .background-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; filter: none; transform: none; }
+    .commerce-canvas::before { display: none; content: ""; position: absolute; inset: 0; z-index: -3; pointer-events: none; background:
+        linear-gradient(90deg, rgba(10, 9, 7, .96) 0%, rgba(11, 11, 9, .78) 42%, rgba(8, 9, 10, .55) 100%),
+        linear-gradient(0deg, rgba(7, 7, 6, .94) 0%, transparent 44%),
+        radial-gradient(circle at 16% 26%, rgba(186, 108, 35, .25), transparent 32%);
+    }
+    .commerce-canvas::after { display: none; content: ""; position: absolute; inset: 0; z-index: -2; pointer-events: none; opacity: .28; background-image:
+        linear-gradient(rgba(255, 231, 190, .08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 231, 190, .08) 1px, transparent 1px);
+      background-size: 54px 54px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,.35), transparent 84%);
+    }
+    .mono { font-family: "Space Mono", monospace; }
+    .shell { display: none; width: 100%; max-width: 1480px; min-height: calc(100 * min(var(--vh, 1vh), 1vh)); margin: 0 auto; padding: 22px 34px 28px; display: flex; flex-direction: column; }
+    .glass { border: 1px solid var(--line); background: var(--panel); box-shadow: inset 0 1px 0 rgba(255,255,255,.06), 0 20px 50px rgba(0,0,0,.22); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
+    .nav-link { transition: color 180ms ease; }
+    .nav-link:hover { color: #fff6e5; }
+    .soft-button, .agent-card { transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease; }
+    .soft-button:hover { transform: translateY(-2px); }
+    .agent-card:hover, .agent-card.is-selected { transform: translateY(-3px); border-color: rgba(238, 189, 105, .72); background: rgba(73, 53, 29, .67); box-shadow: 0 17px 34px rgba(0,0,0,.27), 0 0 0 1px rgba(238,189,105,.12); }
+    .agent-card.is-selected .selected-dot { opacity: 1; transform: scale(1); }
+    .selected-dot { opacity: 0; transform: scale(.5); transition: .18s ease; }
+    .status-pulse { width: 7px; height: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 4px rgba(123,217,155,.12), 0 0 12px rgba(123,217,155,.8); animation: blink 1.8s ease-in-out infinite; }
+    .metric-divider:not(:first-child) { border-left: 1px solid rgba(255,236,199,.12); }
+    .feed-line { border-left: 1px solid rgba(238,189,105,.27); padding-left: 15px; position: relative; }
+    .feed-line::before { content: ""; position: absolute; width: 6px; height: 6px; border: 1px solid #eebd69; background: #15130f; border-radius: 50%; left: -3.5px; top: 5px; }
+    .new-feed { animation: slide-in 350ms ease-out both; }
+    .command-input:focus-visible, button:focus-visible { outline: 2px solid #f3cd89; outline-offset: 3px; }
+    .paused-state { display: none; }
+    .is-paused .paused-state { display: inline; }
+    .is-paused .running-state { display: none; }
+    @keyframes blink { 50% { opacity: .4; transform: scale(.82); } }
+    @keyframes slide-in { from { opacity: 0; transform: translateX(-8px); } to { opacity: 1; transform: translateX(0); } }
+    @media (max-width: 850px) { .shell { padding: 16px; } .hero-layout { grid-template-columns: 1fr !important; } .command-panel { margin-top: 4px; } .desktop-nav { display: none; } }
+    @media (max-width: 540px) { .shell { padding: 12px; } .metric-grid { grid-template-columns: 1fr 1fr !important; } .metric-divider:nth-child(3) { border-left: 0; } .hero-heading { max-width: 100% !important; } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+  </style>
+  <script src="/ _sdk/fbe2ebfd64647c54.data_sdk.js" type="text/javascript" integrity="sha512-vkTX6CfvpHc3WbjK+tFJCaDuw4ERA4aEV/e5/7+MMJPMTF4RJYCI6CAwJBT/gtDW+dba4uLSsPUgDjVDHWtgUQ=="></script>
+  <script src="/ _sdk/fcb6dc01f91829ac.resizing_sdk.js" type="text/javascript" integrity="sha512-YK8JfnN705qaEaVhiL7pcVB2Rs/BbdX5yxV55Az8zT/1JanyEWTw9HqCF915m9iV1YEaoil8qsjJz03l1Kb0Ug=="></script>
+ </head>
+ <body data-template-id="__page-root">
+  <div class="commerce-canvas">
+   <img data-template-id="hero-background-image" loading="lazy" class="canva-image background-photo" />
+   <div class="shell">
+    <header class="flex items-center justify-between gap-4 py-1" aria-label="Command center header">
+     <div class="flex items-center gap-3">
+      <div class="w-8 h-8 rounded-full border border-amber-100/20 bg-amber-100/10 flex items-center justify-center text-amber-100" aria-hidden="true">
+       <i data-lucide="orbit" style="width:16px;height:16px"></i>
+      </div>
+      <p data-template-id="brand-label" class="canva-text mono text-[11px] tracking-[0.03em]"></p>
+     </div>
+     <nav class="desktop-nav flex items-center gap-6" aria-label="Primary navigation">
+      <a data-template-id="nav-track" class="canva-link nav-link mono text-[10px] no-underline" href="#agent-network"></a>
+      <a data-template-id="nav-signal" class="canva-link nav-link mono text-[10px] no-underline" href="#signal-feed"></a>
+      <a data-template-id="nav-protocol" class="canva-link nav-link mono text-[10px] no-underline" href="#command-center"></a>
+     </nav>
+     <button id="apply-flow-button" data-template-id="apply-flow-button" type="button" class="canva-button soft-button mono text-[10px] tracking-wide px-4 py-2 rounded-sm"></button>
+    </header>
+    <main class="flex-1 flex flex-col justify-center py-10" aria-label="AI growth and agentic commerce dashboard">
+     <div class="hero-layout grid grid-cols-[minmax(0,1.2fr)_minmax(330px,.8fr)] gap-10 items-end">
+      <section aria-labelledby="hero-title">
+       <p data-template-id="hero-eyebrow" class="canva-text mono text-[10px] tracking-[0.18em] uppercase mb-5"></p>
+       <h1 id="hero-title" data-template-id="hero-title-text" class="canva-text hero-heading max-w-3xl font-semibold tracking-[-0.06em] leading-[.92]"></h1>
+       <p data-template-id="hero-description" class="canva-text max-w-xl mt-6 text-base leading-relaxed"></p>
+       <div class="metric-grid glass mt-9 grid grid-cols-4 rounded-sm overflow-hidden max-w-3xl">
+        <div class="metric-divider p-4">
+         <p data-template-id="metric-1-label" class="canva-text mono text-[9px] uppercase tracking-[0.12em]"></p>
+         <p data-template-id="metric-1-value" class="canva-text mono font-bold text-lg mt-2"></p>
+        </div>
+        <div class="metric-divider p-4">
+         <p data-template-id="metric-2-label" class="canva-text mono text-[9px] uppercase tracking-[0.12em]"></p>
+         <p data-template-id="metric-2-value" class="canva-text mono font-bold text-lg mt-2"></p>
+        </div>
+        <div class="metric-divider p-4">
+         <p data-template-id="metric-3-label" class="canva-text mono text-[9px] uppercase tracking-[0.12em]"></p>
+         <p data-template-id="metric-3-value" class="canva-text mono font-bold text-lg mt-2"></p>
+        </div>
+        <div class="metric-divider p-4">
+         <p data-template-id="metric-4-label" class="canva-text mono text-[9px] uppercase tracking-[0.12em]"></p>
+         <p data-template-id="metric-4-value" class="canva-text mono font-bold text-lg mt-2"></p>
+        </div>
+       </div>
+      </section>
+      <aside id="command-center" data-template-id="command-panel" class="canva-panel command-panel glass rounded-sm p-5" aria-label="Commerce agent command panel">
+       <div class="flex items-start justify-between gap-4">
+        <div>
+         <p data-template-id="command-kicker" class="canva-text mono text-[10px] tracking-[0.14em] uppercase"></p>
+         <h2 data-template-id="command-title" class="canva-text font-semibold mt-2"></h2>
+        </div>
+        <div class="w-9 h-9 rounded-full border border-amber-100/20 bg-amber-100/10 text-amber-100 flex items-center justify-center shrink-0" aria-hidden="true">
+         <i data-lucide="bot" style="width:17px;height:17px"></i>
+        </div>
+       </div>
+       <div class="mt-5 border-y border-amber-100/10 py-4 flex items-center justify-between gap-3">
+        <div class="flex items-center gap-2">
+         <span class="status-pulse" aria-hidden="true"></span>
+         <span data-template-id="automation-status" class="canva-text mono text-[10px]"></span>
+        </div>
+        <span data-template-id="command-region-tag" class="canva-tag mono text-[9px] px-2 py-1 rounded-full"></span>
+       </div>
+       <div class="mt-5 grid grid-cols-2 gap-3">
+        <div data-template-id="command-signal-card" class="canva-card rounded-sm border border-amber-100/10 p-3">
+         <p data-template-id="command-signal-label" class="canva-text mono text-[9px] uppercase tracking-wide"></p>
+         <p data-template-id="command-signal-value" class="canva-text mono font-bold mt-2"></p>
+        </div>
+        <div data-template-id="command-revenue-card" class="canva-card rounded-sm border border-amber-100/10 p-3">
+         <p data-template-id="command-revenue-label" class="canva-text mono text-[9px] uppercase tracking-wide"></p>
+         <p data-template-id="command-revenue-value" class="canva-text mono font-bold mt-2"></p>
+        </div>
+       </div>
+       <button id="pause-button" data-template-id="pause-button" type="button" class="canva-button soft-button w-full mt-5 rounded-sm py-3 mono text-[10px] tracking-[0.1em]">
+        <span class="running-state" data-template-id="pause-button-running"></span>
+        <span class="paused-state" data-template-id="pause-button-paused"></span>
+       </button>
+      </aside>
+     </div>
+     <section id="agent-network" class="mt-10" aria-labelledby="agent-network-title">
+      <div class="flex items-end justify-between gap-4 mb-4">
+       <div>
+        <p data-template-id="agent-network-kicker" class="canva-text mono text-[10px] tracking-[0.14em] uppercase"></p>
+        <h2 id="agent-network-title" data-template-id="agent-network-title-text" class="canva-text font-semibold mt-1"></h2>
+       </div>
+       <p data-template-id="agent-network-note" class="canva-text mono text-[10px] text-right"></p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-3">
+       <button data-agent="growth" data-template-id="growth-agent-card" type="button" class="canva-card agent-card is-selected text-left glass rounded-sm p-5">
+        <div class="flex justify-between gap-3">
+         <div class="w-9 h-9 flex items-center justify-center rounded-full bg-amber-100/10 border border-amber-100/15 text-amber-100" aria-hidden="true"><i data-lucide="trending-up" style="width:17px;height:17px"></i></div>
+         <span class="selected-dot text-amber-200" aria-hidden="true"><i data-lucide="check-circle-2" style="width:16px;height:16px"></i></span>
+        </div>
+        <h3 data-template-id="growth-agent-title" class="canva-text font-semibold mt-5"></h3>
+        <p data-template-id="growth-agent-description" class="canva-text text-sm leading-relaxed mt-2"></p>
+        <p data-template-id="growth-agent-tag" class="canva-tag mono inline-block mt-4 px-2 py-1 rounded-full text-[9px]"></p>
+       </button>
+       <button data-agent="checkout" data-template-id="checkout-agent-card" type="button" class="canva-card agent-card text-left glass rounded-sm p-5">
+        <div class="flex justify-between gap-3">
+         <div class="w-9 h-9 flex items-center justify-center rounded-full bg-amber-100/10 border border-amber-100/15 text-amber-100" aria-hidden="true"><i data-lucide="shopping-bag" style="width:17px;height:17px"></i></div>
+         <span class="selected-dot text-amber-200" aria-hidden="true"><i data-lucide="check-circle-2" style="width:16px;height:16px"></i></span>
+        </div>
+        <h3 data-template-id="checkout-agent-title" class="canva-text font-semibold mt-5"></h3>
+        <p data-template-id="checkout-agent-description" class="canva-text text-sm leading-relaxed mt-2"></p>
+        <p data-template-id="checkout-agent-tag" class="canva-tag mono inline-block mt-4 px-2 py-1 rounded-full text-[9px]"></p>
+       </button>
+       <button data-agent="retention" data-template-id="retention-agent-card" type="button" class="canva-card agent-card text-left glass rounded-sm p-5">
+        <div class="flex justify-between gap-3">
+         <div class="w-9 h-9 flex items-center justify-center rounded-full bg-amber-100/10 border border-amber-100/15 text-amber-100" aria-hidden="true"><i data-lucide="repeat-2" style="width:17px;height:17px"></i></div>
+         <span class="selected-dot text-amber-200" aria-hidden="true"><i data-lucide="check-circle-2" style="width:16px;height:16px"></i></span>
+        </div>
+        <h3 data-template-id="retention-agent-title" class="canva-text font-semibold mt-5"></h3>
+        <p data-template-id="retention-agent-description" class="canva-text text-sm leading-relaxed mt-2"></p>
+        <p data-template-id="retention-agent-tag" class="canva-tag mono inline-block mt-4 px-2 py-1 rounded-full text-[9px]"></p>
+       </button>
+      </div>
+     </section>
+     <section id="signal-feed" class="mt-5 grid md:grid-cols-[.8fr_1.2fr] gap-3" aria-label="Commerce signal and activity feed">
+      <div data-template-id="signal-panel" class="canva-panel glass rounded-sm p-5">
+       <p data-template-id="signal-kicker" class="canva-text mono text-[10px] tracking-[0.14em] uppercase"></p>
+       <h2 data-template-id="signal-title" class="canva-text font-semibold mt-2"></h2>
+       <p data-template-id="signal-copy" class="canva-text text-sm leading-relaxed mt-3"></p>
+      </div>
+      <div data-template-id="activity-panel" class="canva-panel glass rounded-sm p-5">
+       <div class="flex justify-between items-center gap-3">
+        <div>
+         <p data-template-id="activity-kicker" class="canva-text mono text-[10px] tracking-[0.14em] uppercase"></p>
+         <h2 data-template-id="activity-title" class="canva-text font-semibold mt-2"></h2>
+        </div>
+        <span data-template-id="activity-tag" class="canva-tag mono text-[9px] rounded-full px-2 py-1"></span>
+       </div>
+       <div id="activity-feed" class="mt-4 space-y-3" aria-live="polite">
+        <div class="feed-line">
+         <p data-template-id="activity-1-time" class="canva-text mono text-[9px]"></p>
+         <p data-template-id="activity-1-copy" class="canva-text text-sm mt-1"></p>
+        </div>
+        <div class="feed-line">
+         <p data-template-id="activity-2-time" class="canva-text mono text-[9px]"></p>
+         <p data-template-id="activity-2-copy" class="canva-text text-sm mt-1"></p>
+        </div>
+       </div>
+       <form id="command-form" class="mt-5 pt-4 border-t border-amber-100/10 flex gap-2">
+        <label for="agent-command" class="sr-only">Instruction for agent</label>
+        <input id="agent-command" data-template-id="agent-command-input" class="canva-input command-input min-w-0 flex-1 px-3 py-2.5 rounded-sm border border-amber-100/15 bg-black/25 text-sm placeholder:text-stone-500" type="text" />
+        <button data-template-id="send-command-button" class="canva-button soft-button rounded-sm px-3" type="submit" aria-label="Send instruction">
+         <i data-lucide="arrow-up-right" style="width:16px;height:16px" aria-hidden="true"></i>
+        </button>
+       </form>
+      </div>
+     </section>
+    </main>
+    <footer class="pt-4 flex items-center justify-between gap-4 border-t border-amber-100/10">
+     <p data-template-id="footer-left" class="canva-text mono text-[9px]"></p>
+     <p data-template-id="footer-right" class="canva-text mono text-[9px] text-right"></p>
+    </footer>
+   </div>
+  </div>
+  <script src="/ _sdk/5629ea66dc55d54f.editing_sdk.js" integrity="sha512-snPYzGvgiTEMUBOb+HlCBkFeiM0IRX4hcgA78wvalhC0WnJtaX+RCbosPWtNqZsZ7sZ9NwN0oePZYa+IlMwa+w=="></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      lucide.createIcons();
+      const cards = document.querySelectorAll("[data-agent]");
+      const activityFeed = document.getElementById("activity-feed");
+      const commandForm = document.getElementById("command-form");
+      const commandInput = document.getElementById("agent-command");
+      const pauseButton = document.getElementById("pause-button");
+      function timestamp() {
+        return new Date().toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit", hour12: false }) + " IST";
+      }
+      function addFeedItem(message) {
+        const entry = document.createElement("div");
+        entry.className = "feed-line new-feed";
+        const time = document.createElement("p");
+        time.className = "mono text-[9px] text-amber-100/55";
+        time.textContent = timestamp();
+        const text = document.createElement("p");
+        text.className = "text-sm text-stone-200 mt-1";
+        text.textContent = message;
+        entry.append(time, text);
+        activityFeed.appendChild(entry);
+      }
+      function selectAgent(card) {
+        cards.forEach(item => item.classList.toggle("is-selected", item === card));
+        addFeedItem(card.dataset.agent.charAt(0).toUpperCase() + card.dataset.agent.slice(1) + " agent is now prioritised in the operating queue.");
+      }
+      cards.forEach(card => {
+        card.addEventListener("click", () => selectAgent(card));
+      });
+      document.getElementById("apply-flow-button").addEventListener("click", () => {
+        const growthCard = document.querySelector('[data-agent="growth"]');
+        growthCard.classList.add("is-selected");
+        cards.forEach(card => {
+          if (card !== growthCard) card.classList.remove("is-selected");
+        });
+        addFeedItem("Growth flow activated: high-intent audience cohort sent to the agent queue.");
+        growthCard.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      });
+      pauseButton.addEventListener("click", () => {
+        const paused = pauseButton.classList.toggle("is-paused");
+        addFeedItem(paused ? "Automation paused. Existing customer journeys remain safely monitored." : "Automation resumed. Agentic commerce routing is live again.");
+      });
+      commandForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const command = commandInput.value.trim();
+        if (!command) return;
+        addFeedItem("Operator instruction received: " + command);
+        addFeedItem("Agent acknowledgement: instruction placed into the monitored commerce queue.");
+        commandInput.value = "";
+      });
+    });
+  </script>
+ </body>
+</html>

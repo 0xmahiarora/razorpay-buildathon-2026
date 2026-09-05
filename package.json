@@ -1,0 +1,26 @@
+{
+  "name": "smarthaggle-agentic-commerce",
+  "version": "2.4.0",
+  "description": "Production-Grade SmartHaggle Agentic Commerce Widget with Razorpay SDK, Guardrail Reasoning Engine & Cryptographic Audit Ledger",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "node backend/server.js",
+    "test": "node backend/tests/guardrail.test.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "razorpay": "^2.9.8"
+  },
+  "keywords": [
+    "razorpay",
+    "buildathon",
+    "agentic-commerce",
+    "guardrails",
+    "audit-ledger",
+    "failover-rescue"
+  ],
+  "author": "Razorpay Buildathon Participant",
+  "license": "MIT"
+}
